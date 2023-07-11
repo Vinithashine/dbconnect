@@ -1,0 +1,31 @@
+<?php
+$uname=$_post["uname"];
+$upswd=$_post["upswd"];
+if(!empty($uname)&&!empty($upswd))
+{
+$host="localhost";
+$dbsername="root";
+$dbpassword="";
+$dbname="vinitha"
+a create connections
+$conn=new mysqli($host,$dbusername,$dbpassword,$dbname);
+if(mysqli-connect-error())
+{
+div("connect error"),
+mysqli_connect_error().")
+.mysqli_connect_error());
+}
+else
+{
+//checking the user name
+$select="select uname1 from register where uname1=?limit1",//prepare statement
+$stmt=$com->prepare($select);
+$stmt->blind_param($select);
+$stmt->execute();
+$stmt->blind_result($uname)
+$stmt->store_result();
+$rnum->$stmt->num_row;
+//checking username
+if($rnum==0)
+$stmt->close();
+echo"user name not found<br>";
